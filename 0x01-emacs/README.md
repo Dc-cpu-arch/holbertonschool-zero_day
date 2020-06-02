@@ -1,1 +1,1 @@
-This is the opening file
+0x001 - emacs project 

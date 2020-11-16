@@ -1,0 +1,246 @@
+un script the shell es un programa diseñado para que corra dentro de una
+shell específica de Unix/Linux.
+
+ejemplo:
+
+Boure Shell
+C Shell
+Korn Shell
+GNU Bourne-Again Shell
+
+¿que es una shell?
+
+es un intérprete de línea de comandos y operaciones típicas desarrolladas por
+scrips de shell que sirven para ejecutar programas, manipular archivos,
+imprimir texto.
+
+Los sripts de Shell conforman un lenguaje de programación real. Shell es un
+lenguaje de programación.
+
+¿porqué?
+
+porque tiene variables, estructuras de control, etc.
+
+Por más complejo y largo sea un script, es sólo una lista de comandos ejecutados
+secuencialmente.
+
+***************
+ejemplo de un script que usa el comanod read para tomar input desde el teclado
+y le asigna el valor ingresado a una variable llamada PERSON, que luego arroja
+a STDOUT
+
+
+#!/bin/bash
+
+#Author : Daniel Garzón
+# Script:
+
+echo "what is your name?"
+read PERSON
+echo "Hello, $PERSON"
+
+*****************
+
+
+La Shell es una interace que me permite interactuar con el sistema.
+Agarra datos que yo le ingreso y ejecuta programas basados en ese input.
+
+Cuando un programa termina de ejecutarse, la shell arroja el output de ese
+programa.
+
+la Shell es un ambiente en el cual nosotros podemos correr nuestros comandos,
+programas y scripts.
+
+Podría haber tantas Shell como distribuciones linux, y cada shell tiene su
+propio set de comandos y funciones.
+
+*****************************
+/la_shell_prompt$
+
+cuando usamos $ nos referimos al prompt, que es la línea de
+avisos y la línea donde ingresamos los comandos.
+
+PS1 es una variable de ambiente que puede customizarse
+
+en Unix hay dos tipos de Shell principales: Bourne y C shells
+
+$ es el prompt característico de Bourne
+
+/la_shell_prompt/de_C_es%
+
+¿Que significa bin bash?
+
+es una invocación al programa que va a ejecutar el script. Por eso
+la línea de shebang es la primera. Es una dirección de preproceso que
+contiene la ruta hacia el programa que ejecuta el script.
+
+#! -> son dos símbolos que sirven como convención, indican que se va a hacer un
+llamado a algún programa
+
+/bin -> es el directorio que alberga los programas de la máquina
+/bash -> es el archivo ejectable de una shell llamada bash
+
+# -> si se usa sólo sirve para incluir comentarios en el archivo del script
+
+que puede hacer un script?
+
+tests condicionales (si a es mayor que b)
+loops para abarcar cantidades masivas de datos
+variables para leer y almacenar datos
+etc
+
+groso modo: el script contiene comandos y otro tipo de construcciones que
+le dicen a la shell y a su ambiente qué hacer y cuándo hacerlo.
+
+shell es un lenguaje interpretado, no compilado. Tnato funciones como scripts
+son interpretados.
+
+#! es una construcción
+
+Que es una variable en Shell?
+
+es una cadena de caracteres a la cual le asignamos a un valor, llámesele
+número, texto, nombre de archivo, dispositivo o cualquier otro archivo o
+tipo de dato.
+
+Una variable sólo es un nombre que apunta a los datos reales, y la Shell me
+permite crear, asignar y borrar variables.
+
+NOMBRES DE VARIABLES:
+
+Sólo pueden tener letras a-z A-Z, números 0-9, o el caracter de línea baja '_'
+
+una convención de linux es que todos sus nombres están escritos en MAYÚSCULA
+
+    EX.
+
+    _ALI
+    TOKEN_A
+    VAR_1
+    VAR_2
+
+Nombres inválidos:
+
+	2_VAR
+	-VARIABLE
+	VAR1-VAR2
+	VAR_A!A
+
+	*********************************************************************
+	**los caracteres ! * - tienen significados especiales para la shell**
+	*********************************************************************
+
+¿cómo se define una variable?
+
+variable_name=variable_value
+
+	EX.
+
+	NAME="Zara Ali"
+	VAR1="Zara Ali"
+	VAR2=100
+
+estas son varialbes escalares, que pueden albergar sólo un valor al tiempo
+
+
+******************ejemplo de un script que arroja el valor de una varialbe****
+
+#! /bin/bash
+
+NAME="Jehová"
+echo $NAME
+
+Un script de sólo lectura no permite cambiar el valor de una variable
+
+#! /bin/bash
+
+NAME="Zara Ali"
+readonly NAME
+NAME="Qadiri"
+
+al momento de ejecutar el script, saldrá este error:
+
+/bin/sh: NAME: This variable is read only
+
+unsetting es borrar una variable, o dejar de tener acceso a los valores
+asignados a esa variable. No se puede resetear variables <readonly>
+
+UN SCRIPT PARA UNSET UNA VARIABLE
+
+   #! /bin/bash
+
+   NAME="Yo Soy"
+   unset NAME
+   echo  $NAME
+
+   Este script no arroja nada, NAME es una variable vacía, pero Yo Soy puede
+   estar en algún otro lugar.
+
+TIPOS DE VARIABLES DE UNA SHELL
+
+      LOCALES: es una variable presénte sólamente en la instancia actual de
+      la shell, no están disponibles para programas iniciados por ala shell,
+      son fijadas en el prompt de comandos.
+
+      DE ENTORNO: están disponibles para cualquier proceso hijo de la shell.
+      Algunos programas necesitan variables de entonrno para funcionar bien.
+      un script define sólo variables de entorno que son necesarias para los
+      programas que corre.
+
+      VARIABLES DE SHELL: tienen este nombre especial porque es fijada por la
+      misma shell y la necesita para funcionar correctamente. Algunas de estas
+      son variables de entorno, mienras otras son variables locales.
+      (PUEDEN SER LOCALES Y DE ENTORNO)
+
+      ¿Porqué se reservan ciertos caracteres en los nombres?
+
+Son signos que designan nombres de variables UNIX especiales. Variables que
+están reservadas para funciones específicas.
+
+      $		 hace referencia a PID (identificadores de proceso)
+
+      nombres de variables que comienzan con $:
+
+      $0 - nombre de archivo del script actual
+      $n - se refiere a argumentos con los cuales un scrpt fué invocado.
+      	   n es un número decimal positivo que corresponde a la posición
+	   de un argumento [$1 $2 $3 etc.]
+      $# - número de argumentos adjudicados a un script
+      $* - tódos los argumentos dóblemente citados. Si un script recive 2
+      	   argumentos, $* es equivalente a $! $2
+      $@ - todos los argumentos individualmente doble citados. Si un script
+           recibe dos argumentos, $@ es equivalente a $1 $2
+      $? - el estado de salida de el último comando ejecutado
+      $$ - el número de proceso de la shell actual. Para scripts, este es el
+           process ID bajo el cual se está ejecutando
+      $! - el número de proceso de el último comando de fondo
+
+ARGUMENTOS DE LA LÍNEA DE COMANDOS
+
+$1, $2, $3, $3, ...$9 son parámetros de posición.
+$0 apunta al comando actual, programa, script o función y
+$1, $2, $3, ...$9 se toman como argumentos hacia el comando.
+
+//script que usa varias variables especiales relacionadas con la línea de
+//comandos
+
+	#! /bin/bash
+
+	echo "File Name: $0"
+	echo "First Parameter : $1"
+	echo "Second Parameter : $2"
+	echo "Quoted Values: $@"
+	echo "Quoted Values: $*"
+	echo "Total Number of Parameters : $#"
+
+ARROJA:
+
+	$./test.sh Zara Ali
+	File Name : ./test.sh
+	First Parameter : Zara
+	Second Parameter : Ali
+	Quoted Values: Zara Ali
+	Quoted Values: Zara Ali
+	Total Number of Parameters : 2
+
+

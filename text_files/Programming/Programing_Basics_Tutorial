@@ -1,0 +1,98 @@
+INTRODUCTION PAGE 1 Computers are  machines that work with instructions.
+A instruction is a sequence of activities amongst latitudes, longitudes,
+variables, constants, and so on.
+
+Computer scientist is any person that works doing computer programs to analize
+data.
+
+Programming languages are all the possible ways we can use to do the acitivities 
+we want to through the machine. Languages have different cualities, contexts,
+paragigmns, sintagms, signs, sintaxes, etc.
+
+Computer languages give instructions to the machine, to manage input, process it
+and throw output. input could be data, output could be information. Data is raw
+information is processed.
+
+With programming languages we can do from the easiest and simple program to big
+programs with nice GUI and games with heavy requirements, bots, machine
+production automatization in big corporations.
+
+Campo de Acción de la Programación
+
+Seguridad del hogar
+Agricultura
+Medicina
+Entretenimiento
+Defensa
+Comunicación
+Investigación
+
+
+Un algoritmo es un procedimiento paso a paso para resolver una tarea
+que el programador enlista en un diagrama de flujo que traducirá a
+cualquier lenguaje de programación pertinente en la solución de esa tarea.
+
+Ese algoritmo puede escribirse para resolver problemas como sumar dos valores
+escritos en el código fuente o a través de valores referenciados que el usuario
+ingresa a través de stdin. Que los programas solicitan por stdout.
+
+el mejor lenguaje es el que mejor interface tenga. Es decir, el que mejores
+relaciones permita entre los elementos implicados: usuario(s), periféricos,
+plataformas, portabilidad, posibilidades. Mejor uso de recursos y más
+actividades disponibles.etc.
+
+El inglés es un lenguaje que permite una amplia interfáz entre humanos de
+diferentes nacionalidades. Pero todos comparten las mismas características y
+permiten que los humanos raelizen las mismas actividades.
+
+Todos los lenguajes tienen características, o elementos con los que trabajan:
+
+verbos
+sustantivos
+adjetivos
+adverbios
+proposiciones
+conjunciones
+etc.
+
+Todos los lenguajes de programación tienen características, o elementos con los
+que trabajan:
+
+Entorno de Programación
+Sintaxis
+Tipos de Datos
+Variables
+Palabras Clave
+Operadores Basicos
+Toma de Decisiones
+Ciclos
+Números
+Caracteres
+Arreglos
+Cadenas
+Funciones
+Archivos de Entrada y Salida [File I/O]
+
+
+
+Configurar el Entorno:
+
+Para realizar una actividad necesitas entornos gráficos, programas externos,
+periféricos, conexiones eléctricas y electromagnéticas.
+
+[si vas a usar internet necesitas una conexión a internet y un navegador web]
+[si vas a programar necesitas compiladores, entornos de programación, etc]
+
+Editores de texto: bloc de notas, Notepad++, TextEdit, BBEdit, Emacs, Vim
+Compiladores: Cualquier traductor de texto a binario pertinente para el source
+Intérpretes: Programas que leen y ejecutan código linea por línea
+
+En la compilación los archivos del programa se traducen a archivos binarios y
+posteriormente el lenguaje se ejecuta.
+
+Hay programas que no necesitan compilarse, como Phyton o Java, ellos únicamente
+hacen uso de intérpretes. Con el intérprete los códigos pasan a ejecutar el
+programa directamente.
+
+Hay compiladores e intérretes en línea, ejecutan el código de una manera
+"portable" y desconectada. 

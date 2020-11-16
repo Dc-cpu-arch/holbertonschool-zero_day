@@ -1,0 +1,80 @@
+				SINTAXIS BÁSICA
+
+Es la estructura correcta, donde se hace uso del lenguaje correctamente, lo
+entiende tanto la máquina, el compilador y los programadores. La sintaxis es
+abierta y nos permite realizar muchos movimientos del lenguaje para relacionar
+los elementos, y se pueden llegar a un mismo resultado a través de diferentes
+procedimientos.
+
+En el lenguaje de programación en C [en toda la programación] tenemos que:
+->
+Deben expresarse puntos de entrada de nuestros archivos de programa: archivos de
+cabezera, librerías, valores constantes, estructuras, tipos, prototipos, etc.
+->
+Hay una manera de escribir comentarios que los compiladores e intérpretes van a
+ignorar, es un espacio libre de sintaxis y paradigmas de programación, allí
+entran a regular las reglas gramaticales de los lenguajes de interfaz humana.
+->
+Los espacios en blanco son caracteres que se imprimen en la salida estándar y
+que son leídos por el programa de compilación e interpretación. Pero son
+invisibles. Son los espacios en blanco, las tabulaciones, las órdenes de nuevas
+líneas. Los espacios en blanco no son interpretados por el compilador ni el
+intérprete, por eso deben manifestarse con caracteres especiales (\n\t' ')
+->
+En C el punto y coma sirve como el signo que termina con una expresión. Cada
+instrucción individual: declaración de valores, operaciones lógicas o matemátic
+as, referencias-dereferencias, ordenes de retorno, impresión o escaneo de datos,
+etc.
+->
+Cuando surge un error de naturaleza:
+
+main.c: In function 'main':
+main.c:7:1: error: expected ';' before '}' token
+
+eso quiere decir que en nuestro archivo-función main.c hay un 1 error en la
+línea 7. El error tiene que ver con que se espera que delante de } haya un ;
+esto en programación y en la escritura es invertido a como lo pensamos.
+
+Por lo tanto, el compilador no espera esto:    (};) ó (}' ';) ó (}\n;)
+
+El compilador espera esto:
+
+;} 	      	     ó		;' '}			ó		;\n}
+
+Si no sigues la sintaxis debes corregir los errores posteriores. Seguir la
+sintaxis es sencillo toda vez que sigas al pie de la letra las estructuras de
+cómo se deben escribir las declaraciones, las expresiones, las operaciones, el
+uso de símbolos, etc.
+
+
+¿CÓMO IMPRIMIR "Hello, Jah" EN C, JAVA Y PYTHON?
+
+#include<sdio.h>
+
+int main() {
+    /* printf () function to write Hello, Jah in "C" */
+    printf("Hello, Jah");
+}
+
+****************************************************************
+
+public class HelloWorld {
+       public static void main(String []args) {
+       /* printLn () function to write Hello, Jah in "Java" */
+       System.out.println("Hello, Jah");
+       }
+ }
+
+*****************************************************************
+
+# print function to weite Hello, Jah in "Python" */
+print "Hello, Jah"
+
+*****************************************************************
+
+C y Java son lenguajes de compilación, por eso necesitan ciertas instrucciones
+y definir muchos más valores. Pero Python es un lenguaje interpretado y no
+necesita ese paso intermedio de compilación.
+
+Además, en Python la nueva línea siempre significa la terminación de la
+instrucción. Entonces '\n' = ';' y ';' no es requerido.
